@@ -105,18 +105,17 @@ Below I have added the usages of this json files on python:
 
 2. Find all district from the dhaka division (Python)
 
- <p>From the output of Division the <strong>'Division Code': '30'</strong></p>
+   From the output of Division the <strong>'Division Code': '30'</strong>
 
     ```python 
-    dhaka_district=[]
-
-        for d in district:
-            if(d['Division Code']=='30'):
-                dhaka_district.append(d)
+       dhaka_district=[]
+       for d in district:
+           if(d['Division Code']=='30'):
+               dhaka_district.append(d)
+       print(dhaka_district)
     ```
 
- Output <br>
-
+   Output <br>
 
     ```
     [{'Division Code': '30',
