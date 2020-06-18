@@ -8,7 +8,7 @@ The location info lat & long are provided on district lavel. You can also contri
 Below I have added the usages of this json files on python: 
 
 
-1. Read the json files 
+1. Read the json files: 
 
    
    Read the division
@@ -105,7 +105,37 @@ Below I have added the usages of this json files on python:
 
 2. Find all district from the dhaka division (Python)
 
-```python 
+ <p>From the output of Division the <strong>'Division Code': '30'</strong></p>
+
+    ```python 
+    dhaka_district=[]
+
+        for d in district:
+            if(d['Division Code']=='30'):
+                dhaka_district.append(d)
+    ```
+
+ Output <br>
 
 
-```
+    ```
+    [{'Division Code': '30',
+    'District': 'Dhaka',
+    'District code': '26',
+    'lat': '23.7115253',
+    'long': '90.4111451'},
+    {'Division Code': '30',
+    'District': 'Faridpur',
+    'District code': '29',
+    'lat': '23.6070822',
+    'long': '89.8429406'},
+    {'Division Code': '30',
+    'District': 'Gazipur',
+    'District code': '33',
+    'lat': '24.0022858',
+    'long': '90.4264283'},
+    .
+    .
+    ]
+
+    ```
