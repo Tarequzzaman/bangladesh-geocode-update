@@ -5,7 +5,7 @@
 The location info lat & long are provided on district lavel. You can also contribute to find the lat, long for upazila, union etc. 
 </p>
 
-Below I have added the usages of this json files: 
+Below I have added the usages of this json files on python: 
 
 
 1. Read the json files 
@@ -58,13 +58,49 @@ Below I have added the usages of this json files:
     'long': '90.1121'},
     . 
     . 
-      
-
+    ]
+    ```
+    Read the Upazilas
+   
+   ```python
+        upazila= []
+        with open('upazila.json') as f:
+            upazila = json.load(f)
+   ```
+   Output <br>
+   ```
+    [{'District code': '1', 'Upazilla': 'Bagerhat Sadar', 'Upazilla Code': '8'},
+    {'District code': '1', 'Upazilla': 'Mongla', 'Upazilla Code': '58'},
+    {'District code': '1', 'Upazilla': 'Morrelganj', 'Upazilla Code': '60'},
+    {'District code': '3', 'Upazilla': 'Bandarban Sadar', 'Upazilla Code': '14'},
+    {'District code': '3', 'Upazilla': 'Lama', 'Upazilla Code': '51'},
+    {'District code': '4', 'Upazilla': 'Amtali', 'Upazilla Code': '9'},
+    {'District code': '4', 'Upazilla': 'Barguna Sadar', 'Upazilla Code': '28'},
+    {'District code': '4', 'Upazilla': 'Betagi', 'Upazilla Code': '47'},
     . 
     . 
     ]
    ```
-
+    Read the Unions
+   
+   ```python
+        unions= []
+        with open('union-word.json') as f:
+            unions = json.load(f)
+   ```
+   Output <br>
+   ```
+    [{'Upazilla Code': '8', 'Union-Word': 'Ward No-01', 'Union Code': '1'},
+    {'Upazilla Code': '8', 'Union-Word': 'Ward No-02', 'Union Code': '2'},
+    {'Upazilla Code': '8', 'Union-Word': 'Ward No-03', 'Union Code': '3'},
+    {'Upazilla Code': '8', 'Union-Word': 'Ward No-04', 'Union Code': '4'},
+    {'Upazilla Code': '8', 'Union-Word': 'Ward No-05', 'Union Code': '5'},
+    {'Upazilla Code': '8', 'Union-Word': 'Ward No-06', 'Union Code': '6'},
+    {'Upazilla Code': '8', 'Union-Word': 'Ward No-07', 'Union Code': '7'},
+    . 
+    . 
+    ]
+   ```
 
 
 2. Find all district from the dhaka division (Python)
